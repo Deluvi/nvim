@@ -1,0 +1,30 @@
+[submodule "pack/plugins/start/base16-vim"]
+	path = pack/plugins/start/base16-vim
+	url = https://github.com/chriskempson/base16-vim
+[submodule "pack/plugins/start/rust.vim"]
+	path = pack/plugins/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim
+[submodule "pack/plugins/start/ctrlp.vim"]
+	path = pack/plugins/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule "pack/plugins/start/vim-airline"]
+	path = pack/plugins/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "pack/plugins/start/vim-airline-themes"]
+	path = pack/plugins/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "pack/plugins/start/deoplete.vim"]
+	path = pack/plugins/start/deoplete.vim
+	url = https://github.com/Shougo/deoplete.nvim
+[submodule "pack/plugins/start/deoplete-rust"]
+	path = pack/plugins/start/deoplete-rust
+	url = https://github.com/sebastianmarkow/deoplete-rust
+[submodule "pack/plugins/start/neco-look"]
+	path = pack/plugins/start/neco-look
+	url = https://github.com/ujihisa/neco-look
+[submodule "pack/plugins/opt/goyo.vim"]
+	path = pack/plugins/opt/goyo.vim
+	url = https://github.com/junegunn/goyo.vim
+[submodule "pack/plugins/start/syntastic"]
+	path = pack/plugins/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic
