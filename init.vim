@@ -3,6 +3,7 @@ filetype off                  " required
 
 filetype plugin indent on    " required
 
+set hidden              " Required for operations modifying multiple buffers like rename (LanguageClient)
 set showcmd             " Show (partial) command in status line.
 set showmatch           " Show matching brackets.
 set showmode            " Show current mode.
@@ -17,6 +18,8 @@ set noerrorbells        " No beeps.
 set modeline            " Enable modeline.
 set linespace=0         " Set line-spacing to minimum.
 set nojoinspaces        " Prevents inserting two spaces after punctuation
+set signcolumn=yes      " Always draw the signcolumn (LanguageClient)
+
 " Remaps switch pane to tab.
 map <TAB> <C-w>
 noremap j gj
@@ -46,10 +49,19 @@ noremap ç 9
 noremap à 0
 noremap 3 "
 
+" LanguageClient stuff
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
 " Deoplete stuff
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#rust#racer_binary='/Users/noebaylac/.cargo/bin/racer' "Don't forget to install racer with `cargo +nightly install racer`
-let g:deoplete#sources#rust#rust_source_path='/Users/noebaylac/misc/rust/src' "The rust src can be found on `https://github.com/rust-lang/rust`
+
+" Enable rust-analyzer
+let g:LanguageClient_serverCommands = {
+\ 'rust': ['/home/deluvi/.cargo/bin/rust-analyzer'],
+\ }
 
 " Rust.vim stuff
 let g:rustfmt_autosave = 1 " Enable fmt autosave on Rust
