@@ -37,17 +37,17 @@ endif
 let g:goyo_height='100%'
 let g:goyo_width=79
 " Remaps for azerty keyboard comfort
-noremap & 1
-noremap é 2
-noremap " 3
-noremap ' 4
-noremap ( 5
-noremap - 6
-noremap è 7
-noremap _ 8
-noremap ç 9
-noremap à 0
-noremap 3 "
+"noremap & 1
+"noremap é 2
+"noremap " 3
+"noremap ' 4
+"noremap ( 5
+"noremap - 6
+"noremap è 7
+"noremap _ 8
+"noremap ç 9
+"noremap à 0
+"noremap 3 "
 
 " LanguageClient stuff
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
@@ -65,3 +65,7 @@ let g:LanguageClient_serverCommands = {
 
 " Rust.vim stuff
 let g:rustfmt_autosave = 1 " Enable fmt autosave on Rust
+
+"CtrlP stuff
+let g:ctrlp_max_depth = 40
+let g:ctrlp_path_nolim = 1
